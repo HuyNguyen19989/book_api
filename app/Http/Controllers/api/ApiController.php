@@ -14,12 +14,10 @@ use Validator;
 
 class ApiController extends Controller
 {
-    // 
-    // 
-    // 
-    // Book manager
-    // 
-    // 
+  
+    //////////////////////////////////////////
+    // hàm để show dữ liệu (dùng get)
+    /////////////////////////////////////////
     protected function bookindex(){
         return Books::all();
     }
@@ -28,7 +26,7 @@ class ApiController extends Controller
         return ['book'=>Books::where('id',$id)->first(),
     ];
     }
-    //////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////
     // hàm tạo sách dựa trên category có sẵn
     /////////////////////////////////////////////////////////////
     protected function bookcreate(Request $request){
@@ -81,10 +79,11 @@ class ApiController extends Controller
         $bookcategory=Book_Cactegory::create($input);
     }
     // 
-    //  
+    ////////////////////////////////////////////////////  
     //  File manager
-    // 
+    ///////////////////////////////////////////////////
     // Upload anh bia 
+    // ////////////////////////////////////////////////
     protected function uploadcover(request $request){
         $validate=Validator::make($request -> all(),[
             'cover' =>'required|image:jpeg,png,jpg,gif',
@@ -109,7 +108,9 @@ class ApiController extends Controller
             $asset =Assets::create($input);
         return $asset['id'];        
     } 
+    /////////////////////////////////
     // Upload file audio
+    ////////////////////////////////
     protected function uploadaudio(request $request){
         $validate=Validator::make($request -> all(),[
             //  dùng để check định dạng file âm thanh
