@@ -598,6 +598,7 @@ class ComposerStaticInit1947aa126789a8d0d4eb21f4d2d5ecae
         'App\\Models\\Book_Category' => __DIR__ . '/../..' . '/app/Models/Book_Category.php',
         'App\\Models\\Books' => __DIR__ . '/../..' . '/app/Models/Books.php',
         'App\\Models\\Categories' => __DIR__ . '/../..' . '/app/Models/Categories.php',
+        'App\\Models\\Chapters' => __DIR__ . '/../..' . '/app/Models/Chapters.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',

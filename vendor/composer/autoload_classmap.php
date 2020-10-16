@@ -24,6 +24,7 @@ return array(
     'App\\Models\\Book_Category' => $baseDir . '/app/Models/Book_Category.php',
     'App\\Models\\Books' => $baseDir . '/app/Models/Books.php',
     'App\\Models\\Categories' => $baseDir . '/app/Models/Categories.php',
+    'App\\Models\\Chapters' => $baseDir . '/app/Models/Chapters.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',

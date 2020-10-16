@@ -78,7 +78,20 @@ class ApiController extends Controller
         $input=$request->all();
         $bookcategory=Book_Cactegory::create($input);
     }
-    // 
+    protected function chaptercreate(Request $request){
+        $validate=Validator::make($request->all(),[
+            'name' => 'required',
+            'author' => 'required',
+            'description' => 'required',
+            'cover'=>'required',
+            'category' => 'required'
+        ]);
+        if($validate->fails()){
+            return response()->json(['error' => $validate->errors()
+        ], 401);
+        }
+    }
+
     ////////////////////////////////////////////////////  
     //  File manager
     ///////////////////////////////////////////////////
