@@ -30,6 +30,7 @@ Route::group(['middleware' => 'auth:api'], function() {
 
 // Api sach
 Route::get('books', 'App\Http\Controllers\api\ApiController@bookindex');
+Route::get('books/{id}', 'App\Http\Controllers\api\ApiController@bookinfo')->where('id', '[0-9]+');
 Route::group(['middleware' => 'auth:api'], function() {
 Route::post('bookcreate', 'App\Http\Controllers\api\ApiController@bookcreate');
 Route::post('cover', 'App\Http\Controllers\api\ApiController@cover');
