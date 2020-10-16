@@ -78,8 +78,6 @@ class ApiController extends Controller
     protected function createbookcategory(request $request){
         // Biến book_id và catalog_id
         $input=$request->all();
-        $user=$request->user();
-        $input['created_by']=$user['name'];
         $bookcategory=Book_Cactegory::create($input);
     }
     // 
